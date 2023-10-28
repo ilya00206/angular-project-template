@@ -1,0 +1,102 @@
+{
+  "root": true,
+  "ignorePatterns": ["projects/**/*", "*.spec.ts"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "plugins": ["unused-imports"],
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/contextual-lifecycle": "warn",
+        "@angular-eslint/sort-lifecycle-methods": "warn",
+        "@angular-eslint/no-conflicting-lifecycle": "warn",
+        "@angular-eslint/no-lifecycle-call": "warn",
+        "@angular-eslint/directive-selector": [
+          "warn",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "warn",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+
+        "@angular-eslint/prefer-output-readonly": "warn",
+
+        "@angular-eslint/contextual-decorator": "warn",
+
+        "@angular-eslint/no-input-rename": "warn",
+
+        "@typescript-eslint/no-useless-constructor": "warn",
+        "@typescript-eslint/prefer-readonly": "warn",
+
+        "@typescript-eslint/ban-types": "error",
+        "default-param-last": "off",
+        "@typescript-eslint/default-param-last": "warn",
+        "@typescript-eslint/unbound-method": "off",
+        "unused-imports/no-unused-imports-ts": "warn",
+
+        // strict
+        "@typescript-eslint/no-base-to-string": "warn",
+        "@typescript-eslint/array-type": "warn",
+        "@typescript-eslint/consistent-generic-constructors": "warn",
+        "@typescript-eslint/consistent-indexed-object-style": "warn",
+        "@typescript-eslint/consistent-type-assertions": "warn",
+        "@typescript-eslint/no-confusing-non-null-assertion": "warn",
+        "@typescript-eslint/no-duplicate-enum-values": "warn",
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": "warn",
+
+        "unused-imports/no-unused-vars": [
+          "warn",
+          {
+            "vars": "all",
+            "varsIgnorePattern": "^_",
+            "args": "after-used",
+            "argsIgnorePattern": "^_"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.html"],
+
+      "extends": ["plugin:@angular-eslint/template/recommended", "plugin:@angular-eslint/template/accessibility"],
+      "rules": {
+        "@angular-eslint/template/prefer-self-closing-tags": ["warn"],
+        "@angular-eslint/template/no-duplicate-attributes": ["warn"],
+        "@angular-eslint/template/alt-text": ["warn"],
+        "@angular-eslint/template/button-has-type": "warn",
+        "@angular-eslint/template/click-events-have-key-events": "warn",
+        "@angular-eslint/template/conditional-complexity": ["warn", { "maxComplexity": 3 }],
+        "@angular-eslint/template/elements-content": ["warn"],
+        "@angular-eslint/template/interactive-supports-focus": ["warn"],
+        "@angular-eslint/template/label-has-associated-control": ["warn"],
+        "@angular-eslint/template/mouse-events-have-key-events": ["warn"],
+        "@angular-eslint/template/no-any": ["warn"],
+        "@angular-eslint/template/no-autofocus": ["warn"],
+        "@angular-eslint/template/no-distracting-elements": ["warn"],
+        "@angular-eslint/template/prefer-ngsrc": ["warn"],
+        "@angular-eslint/template/role-has-required-aria": ["warn"],
+        "@angular-eslint/template/table-scope": ["warn"],
+        "@angular-eslint/template/valid-aria": ["warn"],
+        "@angular-eslint/template/attributes-order": ["warn"]
+      }
+    }
+  ]
+}
