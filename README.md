@@ -1,4 +1,4 @@
-# Angular folder structure project
+# Angular empty configured project
 
 This repository contains empty Angular 16.2 project template used for enterpise apps with configured:
 
